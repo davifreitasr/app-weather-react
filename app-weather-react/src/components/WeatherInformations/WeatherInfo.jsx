@@ -15,11 +15,12 @@ function WeatherInfo({weather}) {
                 <p className='temperature'>{Math.round(weather.main.temp)}°C</p>
             </div>
 
-            <p className='description'>{weather.weather[0].description}</p>    
+            <p className='description'>{weather.weather[0].description}</p>
             <div className='temp-container'>
                 <p>Sensação térmica: {Math.round(weather.main.feels_like)}°C</p>
                 <p>Umidade: {weather.main.humidity}%</p>
                 <p>Temp. máxima: {Math.round(weather.main.temp_max)}°C</p>
+
             </div>
         </div>
     )
