@@ -6,7 +6,6 @@ import WeatherInfo from './components/WeatherInformations/WeatherInfo'
 function App() {
 
   const [weather, setWeather] = useState()
-  const [weatherForecast, setWatherForecast] = useState()
 
   const inputRef = useRef()
 
@@ -15,13 +14,10 @@ function App() {
       const city = inputRef.current.value
       const apiKey = '5452e31c86094b903cdb90c07a391619'
       
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`  
-      const urlForecast = `api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`
 
       const response = await axios.get(url)
-      const forecast = await axios.get(urlForecast)
 
-      setWatherForecast(forecast.data)
       setWeather(response.data)
 
     } catch (err) {
