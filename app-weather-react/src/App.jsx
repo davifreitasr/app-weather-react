@@ -34,7 +34,7 @@ function App() {
     <div className='container'>
       <div className='header'>
         <h1>GoWeather</h1>
-        <img src="./public/images/weather.png" alt="GoWeather" />
+        <img src="./images/weather.png" alt="GoWeather" />
       </div>
       <div className='container-form'>
         <input ref={inputRef} type="text" placeholder='Digite o nome da cidade' />
